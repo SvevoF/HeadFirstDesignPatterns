@@ -1,6 +1,4 @@
-# NOTES
-
-_Someone already solved your problems_
+# Someone already solved your problems
 
 ## What can I do to learn
 
@@ -21,7 +19,7 @@ Redundancy is intentional and important.
 
 ## Intro to Design Patterns
 
-**Design Principle**: identify the aspects of the application that vary (from every new requirement) and separate them from what stays the same. 
+**Design Principle**: identify the aspects of the application that vary (from every new requirement) and separate them from what stays the same.
 **IOW**: Take what varies and incapsulate it so you can alter or extend the parts that vary without affecting those that don't; the results is fewer unintended consequences from code changes and more flexibility in the system.
 
 **All design patterns provide a way to let _some part of the system vary indipendently of all the other parts_.**
@@ -60,3 +58,18 @@ model->SetFlyBehavior(std::unique_ptr<FlyRocketPowered>(std::make_unique<FlyRock
 
 ## Encapsulated behaviors
 
+The main change between the original structure and the one in this repo is that _composition_ is now used instead of _inheritance_.
+**Design Principle**: Favor composition over inheritance.
+
+Systems that use composition are a lot more flexible: it allows for _encapsulation_ of family of algorithms into their own set of classes but also allows for changes in the behavior at runtime.
+
+## Definition of the pattern
+
+The **Strategy Pattern** defines a family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary indipendently from clients using it.
+
+## On a side note
+
+Design patterns are a shared vocabulary with other developers: less words, more abstract concepts.
+They also allow to think at the pattern level, instead of the object level (which is still important but might be not enough, as it was for the Duck program at the beginning).
+
+One of the secrets of creating maintanable code is thinking about how they might change in the future; the OO-principles (such as encapsulation, inheritance, ...) address the issue of not finding a pattern that matches the problem.
