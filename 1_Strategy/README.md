@@ -1,4 +1,4 @@
-# Someone already solved your problems
+# 1. Someone already solved your problems
 
 ## What can I do to learn
 
@@ -19,12 +19,13 @@ Redundancy is intentional and important.
 
 ## Intro to Design Patterns
 
-**Design Principle**: identify the aspects of the application that vary (from every new requirement) and separate them from what stays the same.
-**IOW**: Take what varies and incapsulate it so you can alter or extend the parts that vary without affecting those that don't; the results is fewer unintended consequences from code changes and more flexibility in the system.
+> **Design Principle**: identify the aspects of the application that vary (from every new requirement) and separate them from what stays the same.
+
+> **IOW**: Take what varies and incapsulate it so you can alter or extend the parts that vary without affecting those that don't; the results is fewer unintended consequences from code changes and more flexibility in the system.
 
 **All design patterns provide a way to let _some part of the system vary indipendently of all the other parts_.**
 
-**Design Principle**: Program to an interface, not an implementation, where it really means **program to a supertype**.
+> **Design Principle**: Program to an interface, not an implementation, where it really means **program to a supertype**.
 
 A supertype means that, regardless of the specific implementation of the the class that inherits, we can use the same methods. In this way, we can assign the concrete implementation object at runtime while not changing a line of code (since we are using the /</<interface methods/>/>, which are the same regardless of the implementation.
 
@@ -59,13 +60,14 @@ model->SetFlyBehavior(std::unique_ptr<FlyRocketPowered>(std::make_unique<FlyRock
 ## Encapsulated behaviors
 
 The main change between the original structure and the one in this repo is that _composition_ is now used instead of _inheritance_.
-**Design Principle**: Favor composition over inheritance.
+
+> **Design Principle**: Favor composition over inheritance.
 
 Systems that use composition are a lot more flexible: it allows for _encapsulation_ of family of algorithms into their own set of classes but also allows for changes in the behavior at runtime.
 
 ## Definition of the pattern
 
-The **Strategy Pattern** defines a family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary indipendently from clients using it.
+> The **Strategy Pattern** defines a family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary indipendently from clients using it.
 
 ## On a side note
 
